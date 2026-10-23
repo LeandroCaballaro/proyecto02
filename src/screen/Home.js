@@ -2,12 +2,18 @@ import { StyleSheet, Text, View, Image, ScrollView, Pressable } from 'react-nati
 import React, { useState } from 'react'
 import ImgEncabezado from '../../assets/enca.jpg'
 import Chat from './Chat'
+import TestVocacional from './TestVocacional'
 
 const Home = () => {
   const [mostrarChat, setMostrarChat] = useState(false)
+  const [mostrarTest, setMostrarTest] = useState(false)
 
   if (mostrarChat) {
     return <Chat onVolver={() => setMostrarChat(false)} />
+  }
+
+  if (mostrarTest) {
+    return <TestVocacional onVolver={() => setMostrarTest(false)} />
   }
 
   return (
@@ -30,6 +36,9 @@ const Home = () => {
           <View style={styles.menu}>
             <Text style={styles.item}>Contactos</Text>
           </View>
+          <Pressable style={styles.menu} onPress={() => setMostrarTest(true)}>
+            <Text style={styles.item}>Test vocacional</Text>
+          </Pressable>
         </View>
       </ScrollView>
 
