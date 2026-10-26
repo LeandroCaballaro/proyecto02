@@ -5,13 +5,31 @@ import { calcularResultado } from '../test-vocacional/calculo'
 
 const ESCUELA = 'E.E.S.T. N°1 Cecilia Berdichevski'
 
+// Mezcla las opciones de cada pregunta para que la de cada carrera no quede
+// siempre en el mismo lugar. La neutra queda siempre al final.
+function mezclarOpciones() {
+  return preguntas.map((pregunta) => {
+    const deCarrera = pregunta.opciones.filter((opcion) => opcion.carrera !== null)
+    const neutras = pregunta.opciones.filter((opcion) => opcion.carrera === null)
+    for (let i = deCarrera.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      const aux = deCarrera[i]
+      deCarrera[i] = deCarrera[j]
+      deCarrera[j] = aux
+    }
+    return { texto: pregunta.texto, opciones: deCarrera.concat(neutras) }
+  })
+}
+
 const TestVocacional = ({ onVolver }) => {
   // 'inicio' -> 'preguntas' -> 'resultado'
   const [etapa, setEtapa] = useState('inicio')
   const [indice, setIndice] = useState(0)
   const [respuestas, setRespuestas] = useState([])
+  const [mezcladas, setMezcladas] = useState(preguntas)
 
   const comenzar = () => {
+    setMezcladas(mezclarOpciones())
     setRespuestas([])
     setIndice(0)
     setEtapa('preguntas')
@@ -46,7 +64,7 @@ const TestVocacional = ({ onVolver }) => {
   )
 
   const renderPregunta = () => {
-    const pregunta = preguntas[indice]
+    const pregunta = mezcladas[indice]
     const progreso = (indice / preguntas.length) * 100
     return (
       <View>

@@ -30,101 +30,105 @@ export const CARRERAS = {
   },
 }
 
+// Las preguntas no hablan de computadoras a proposito: miden gustos y formas
+// de pensar para que la respuesta "correcta" no sea obvia.
+//  - Informatica: lo practico, lo fisico, reparar, trabajar con gente.
+//  - Programacion: lo abstracto, la logica, planificar, crear desde cero.
 export const preguntas = [
   {
-    texto: 'Si se rompe la computadora de tu casa, ¿qué hacés?',
+    texto: 'Tenés un sábado libre. ¿Qué plan te tienta más?',
     opciones: [
-      { texto: 'La abro para ver qué pieza falla', carrera: 'informatica' },
-      { texto: 'Busco si es un error del programa y trato de arreglarlo', carrera: 'programacion' },
-      { texto: 'Le pido ayuda a alguien que sepa', carrera: null },
+      { texto: 'Desarmar un aparato viejo para ver cómo es por dentro', carrera: 'informatica' },
+      { texto: 'Inventar las reglas de un juego de mesa nuevo', carrera: 'programacion' },
+      { texto: 'Salir con amigos y ver qué surge', carrera: null },
     ],
   },
   {
-    texto: '¿Qué te gustaría crear o armar?',
+    texto: 'En un trabajo en grupo, ¿qué rol tomás casi siempre?',
     opciones: [
-      { texto: 'Una red de computadoras para un aula', carrera: 'informatica' },
-      { texto: 'Un videojuego o una app para el celular', carrera: 'programacion' },
-      { texto: 'Las dos cosas me interesan igual', carrera: null },
+      { texto: 'Organizo los pasos y reparto las tareas', carrera: 'programacion' },
+      { texto: 'Consigo los materiales y armo la maqueta', carrera: 'informatica' },
+      { texto: 'El que haga falta en ese momento', carrera: null },
     ],
   },
   {
-    texto: '¿Qué materia te resulta más entretenida?',
+    texto: '¿Qué te deja más satisfecho?',
     opciones: [
-      { texto: 'Tecnología / Electrónica', carrera: 'informatica' },
-      { texto: 'Matemática (resolver problemas paso a paso)', carrera: 'programacion' },
-      { texto: 'Ninguna en especial', carrera: null },
+      { texto: 'Que vuelva a andar algo que estaba roto', carrera: 'informatica' },
+      { texto: 'Encontrar la forma más corta de resolver un problema', carrera: 'programacion' },
+      { texto: 'Terminar algo a tiempo, sea lo que sea', carrera: null },
     ],
   },
   {
-    texto: 'Cuando usás una aplicación, ¿qué te da más curiosidad?',
+    texto: 'Te toca armar un mueble que viene en caja. ¿Cómo arrancás?',
     opciones: [
-      { texto: 'En qué equipo o servidor está funcionando', carrera: 'informatica' },
-      { texto: 'Cómo está hecho el código por dentro', carrera: 'programacion' },
-      { texto: 'Solo me interesa usarla', carrera: null },
+      { texto: 'Leo todo el instructivo y sigo el orden exacto', carrera: 'programacion' },
+      { texto: 'Empiezo a encastrar piezas y me guío por cómo van quedando', carrera: 'informatica' },
+      { texto: 'Le dejo la tarea a otro', carrera: null },
     ],
   },
   {
-    texto: '¿Cómo preferís trabajar?',
+    texto: '¿En qué tipo de trabajo te ves más cómodo?',
     opciones: [
-      { texto: 'Con las manos: cables, placas y herramientas', carrera: 'informatica' },
-      { texto: 'Sentado frente a la pantalla escribiendo instrucciones', carrera: 'programacion' },
-      { texto: 'Me adapto a cualquiera de las dos', carrera: null },
+      { texto: 'Uno en el que me muevo y trato con gente distinta cada día', carrera: 'informatica' },
+      { texto: 'Uno en el que me concentro horas en un mismo proyecto', carrera: 'programacion' },
+      { texto: 'Me adapto a cualquiera de los dos', carrera: null },
     ],
   },
   {
-    texto: 'Un amigo no tiene Internet en su casa. Vos...',
+    texto: '¿Cuál de estos juegos elegís?',
     opciones: [
-      { texto: 'Reviso el router, los cables y la configuración', carrera: 'informatica' },
-      { texto: 'Le armo un programa que avise cuando se corta la conexión', carrera: 'programacion' },
-      { texto: 'Lo intento, pero no sé si lo resolvería', carrera: null },
+      { texto: 'Ajedrez o sudoku', carrera: 'programacion' },
+      { texto: 'Un juego de construir o de taller mecánico', carrera: 'informatica' },
+      { texto: 'Ninguno me llama mucho', carrera: null },
     ],
   },
   {
-    texto: '¿Qué tarea te parece más desafiante?',
+    texto: 'Tenés que hacer la misma tarea aburrida todos los días. ¿Qué pensás?',
     opciones: [
-      { texto: 'Instalar y configurar un sistema operativo', carrera: 'informatica' },
-      { texto: 'Encontrar el error en un programa que no anda', carrera: 'programacion' },
-      { texto: 'Las dos me parecen igual de difíciles', carrera: null },
+      { texto: 'Ordeno el lugar y las herramientas para hacerla más rápido', carrera: 'informatica' },
+      { texto: 'Busco un método para que se haga casi sola', carrera: 'programacion' },
+      { texto: 'La hago y listo', carrera: null },
     ],
   },
   {
-    texto: '¿Te gustan los acertijos de lógica y los rompecabezas?',
+    texto: 'Mirando un semáforo, ¿qué te da más curiosidad?',
     opciones: [
-      { texto: 'No mucho, prefiero algo más práctico', carrera: 'informatica' },
-      { texto: 'Sí, me encantan', carrera: 'programacion' },
-      { texto: 'A veces', carrera: null },
+      { texto: 'La regla que decide cuánto dura cada color', carrera: 'programacion' },
+      { texto: 'Cómo le llega la electricidad y qué pasa si se corta', carrera: 'informatica' },
+      { texto: 'Nunca me lo pregunté', carrera: null },
     ],
   },
   {
-    texto: '¿En qué trabajo te imaginás en el futuro?',
+    texto: 'Cuando aprendés algo nuevo, preferís...',
     opciones: [
-      { texto: 'Técnico de soporte o administrador de redes', carrera: 'informatica' },
-      { texto: 'Desarrollador de software o diseñador de apps', carrera: 'programacion' },
-      { texto: 'Todavía no lo sé', carrera: null },
+      { texto: 'Probarlo con las manos aunque me equivoque', carrera: 'informatica' },
+      { texto: 'Entender primero la lógica y después practicar', carrera: 'programacion' },
+      { texto: 'Que alguien me lo muestre una vez', carrera: null },
     ],
   },
   {
-    texto: 'Si tuvieras que mejorar el laboratorio de la escuela, ¿qué harías?',
+    texto: 'En Matemática, ¿qué es lo que más disfrutás?',
     opciones: [
-      { texto: 'Actualizar las computadoras y ordenar el cableado', carrera: 'informatica' },
-      { texto: 'Hacer un sistema para registrar préstamos y turnos', carrera: 'programacion' },
-      { texto: 'Cualquiera de las dos ideas me sirve', carrera: null },
+      { texto: 'Resolver problemas de varios pasos razonando', carrera: 'programacion' },
+      { texto: 'Medir y calcular cosas que puedo ver y tocar', carrera: 'informatica' },
+      { texto: 'No disfruto mucho Matemática', carrera: null },
     ],
   },
   {
-    texto: '¿Qué video mirarías primero?',
+    texto: 'Si tuvieras tu propio emprendimiento, sería...',
     opciones: [
-      { texto: '"Cómo armar una PC gamer desde cero"', carrera: 'informatica' },
-      { texto: '"Creá tu primera página web en 10 minutos"', carrera: 'programacion' },
-      { texto: 'Me daría lo mismo', carrera: null },
+      { texto: 'Un local donde la gente viene a que le soluciones problemas', carrera: 'informatica' },
+      { texto: 'Un producto creado desde cero que use mucha gente', carrera: 'programacion' },
+      { texto: 'Todavía no me imagino uno', carrera: null },
     ],
   },
   {
-    texto: 'Cuando algo sale mal, ¿qué te sale más natural?',
+    texto: '¿Qué te frustra más?',
     opciones: [
-      { texto: 'Probar cambiando piezas o configuraciones hasta que funcione', carrera: 'informatica' },
-      { texto: 'Pensar paso a paso qué instrucción falló', carrera: 'programacion' },
-      { texto: 'Depende de la situación', carrera: null },
+      { texto: 'Un error que no entiendo por qué pasó', carrera: 'programacion' },
+      { texto: 'Algo que no funciona y no puedo abrir para revisarlo', carrera: 'informatica' },
+      { texto: 'Las dos cosas por igual', carrera: null },
     ],
   },
 ]
